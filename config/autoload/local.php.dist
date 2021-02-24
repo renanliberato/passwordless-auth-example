@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * Local Configuration Override
+ *
+ * This configuration override file is for overriding environment-specific and
+ * security-sensitive configuration information. Copy this file without the
+ * .dist extension at the end and populate values as needed.
+ *
+ * NOTE: This file is ignored from Git by default with the .gitignore included
+ * in laminas-mvc-skeleton. This is a good practice, as it prevents sensitive
+ * credentials from accidentally being committed into version control.
+ */
+
+return [
+    'db' => [
+        'host' => '127.0.0.1',
+        'db' => 'mydb',
+        'user' => 'root',
+        'pass' => '',
+        'charset' => 'utf8mb4',
+    ],
+    'mail' => [
+        'name' => 'mywebsite',
+        'host' => 'mail.mywebsite.com',
+        'port' => 587,
+        'connection_class' => 'plain',
+        'connection_config' => [
+            'username' => 'contact@mywebsite.com',
+            'password' => 'mywebsitepassword',
+            'ssl' => 'tls',
+        ],
+    ]
+];

@@ -1,0 +1,5 @@
+<form style='display: flex; flex-direction: column;' action='<?= $this->url('passwordless-auth', ['controller' => 'auth', 'action' => 'login']) ?>' method='POST'>
+    <label>Email</label>
+    <input type='email' name='email' placeholder='me@domain.com' />
+    <button>Login</button>
+</form>

@@ -1,0 +1,16 @@
+<?php foreach ($sessions as $key => $session): ?>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p><?= $session->createdAt ?></p>
+        <?php if ($key == 0): ?>
+            <span>Current session</span>
+        <?php elseif ($session->active && !$session->purged): ?>
+            <form style='display: flex; flex-direction: column;' action='<?= $this->url('application', ['controller' => 'profile', 'action' => 'disconnect']) ?>' method='POST'>
+                <input type="hidden" name="access_token" value="<?= $session->accessToken ?>"/>
+                <button>Logout</button>
+            </form>
+        <?php elseif ($session->purged): ?>
+            <span>Disconnected</span>
+        <?php endif; ?>
+    </div>
+<?php endforeach; ?>
+

@@ -1,0 +1,7 @@
+<form style='display: flex; flex-direction: column;' action='<?= $this->url('passwordless-auth', ['controller' => 'register', 'action' => 'register']) ?>' method='POST'>
+    <label>Name</label>
+    <input type='text' name='name' placeholder='Me' />
+    <label>Email</label>
+    <input type='email' name='email' placeholder='me@domain.com' />
+    <button>Register</button>
+</form>

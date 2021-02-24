@@ -1,0 +1,7 @@
+<p>Enter the code we sent you via e-mail to continue:</p>
+<form style='display: flex; flex-direction: column;' action='<?= $this->url('passwordless-auth', ['controller' => 'validatetoken', 'action' => 'validate']) ?>' method='POST'>
+    <input type='hidden' name='email' value="<?= $email ?>" />
+    <label>Token</label>
+    <input type='text' name='token' placeholder="1234" />
+    <button>Continue</button>
+</form>
